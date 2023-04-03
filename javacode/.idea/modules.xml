@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/deep/deep.iml" filepath="$PROJECT_DIR$/deep/deep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logback-app/logback-app.iml" filepath="$PROJECT_DIR$/logback-app/logback-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logback-app/movie-buy.iml" filepath="$PROJECT_DIR$/logback-app/movie-buy.iml" />
+    </modules>
+  </component>
+</project>

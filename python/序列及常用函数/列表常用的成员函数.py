@@ -1,0 +1,34 @@
+a=[1,5,6,7,5,5,1,77,4]
+print(a.count(5))#返回列表中某元素数量
+print(a.append(100))
+print(a)#向列表的尾部添加一个元素
+b=a.copy()#返回自身的浅复制
+print(b)
+b[1]=4
+print(a,b)
+c=[11,22,33]
+a.extend(c)#将列表中的元素全部添加到尾部
+print(a)
+print(a.index(5))#查找元素并返回第一次出现的下标，找不到引发异常
+a.insert(0,99)#将元素插入到下标i处
+print(a)
+print(a.pop())#删除并返回下标为i的元素，
+print(a)
+a.remove(5)#删除元素，如果有多个只删除第一个，若不存在则引发异常
+print(a)
+a.sort()#将列表从小到大排序
+print(a)
+a.reverse()#颠倒整个列表
+print(a)
+#也可写为a.sort(reverse=True)
+del(a[1])
+print(a)
+del(a[1:4])
+print(a)
+del(a[1:6:2])
+print(a)
+del(a)
+try:
+    print(a)
+except:
+    print('''name 'a' is not defined''')

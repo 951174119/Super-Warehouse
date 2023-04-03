@@ -1,0 +1,25 @@
+#实例二
+#亚马逊商品页面的爬取
+#https://www.amazon.cn//gp//product//B01M8L5Z3Y
+import requests
+url='https://www.amazon.cn//gp//product//B01M8L5Z3Y'
+try:
+    r=requests.get(url)
+    r.raise_for_status()
+    r.encoding=r.apparent_encoding
+    print(r.text[:1000])
+except:
+    print('访问失败')
+#现在亚马逊，百度，淘宝等网站爬取错误解决方法
+#修改headers和cookies两个参数，不然的话需要人机验证，若还不成功尝试添加浏览器里header内的其他信息
+print('\n\n\n')
+print('--------------------------------------------------------------------')
+try:
+    kv={'user-agent':'Mozilla/5.0'}
+    coo={'cookies':"baidu.com"}
+    r=requests.get(url,headers=kv,cookies=coo)
+    r.raise_for_status()
+    r.encoding=r.apparent_encoding
+    print(r.text[:1000])
+except:
+    print('访问失败')

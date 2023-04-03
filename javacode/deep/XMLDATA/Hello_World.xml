@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--这是注释-->
+<student>
+    <name>小明</name>
+    <sex>男</sex>
+    <age>18</age>
+    <info>
+        <add>China</add>
+    </info>
+    <![CDATA[
+字符数据区，写任意字符不会冲突
+    ]]>
+</student>

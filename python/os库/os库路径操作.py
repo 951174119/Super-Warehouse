@@ -1,0 +1,34 @@
+#os库提供通用的、基本的操作系统交互功能
+#os库是Python标准库，包含几百个函数
+#常用路径操作、进程管理、环境参数等几类
+#路径操作：os.path子库，处理文件路径及信息
+#进程管理：启动系统中其他程序
+#环境参数：获得系统软硬件信息等环境参数
+#路径操作：
+#os.path子库以path为入口，用于操作和处理文件路径，
+import os.path as op
+import time
+#op.abspath(path)返回path在当前系统中的绝对路径
+print(op.abspath('贾天乐.ico'))
+#op.normpath(path)归一化path的表示形式，统一用\\分隔路径
+print(op.normpath(r"C://Users//jiatianle//Desktop//python//turtle库//贾天乐.ico"))
+#op.relpath(path)返回当前程序与文件之间的相对路径
+print(op.relpath(r'C:\Users\jiatianle\Desktop\python\turtle库\贾天乐.ico'))
+#op.dirname(path)返回path中的目录名称
+print(op.dirname(r"C:\Users\jiatianle\Desktop\python\turtle库\贾天乐.ico"))
+#op.basename(path)返回path中最后的文件名称
+print(op.basename(r'C:\Users\jiatianle\Desktop\python\turtle库\贾天乐.ico'))
+#op.join(path,*paths)组合path与paths，返回一个路径字符串
+print(op.join(r'C:\Users',r'jiatianle\Desktop\python\turtle库\贾天乐.ico'))
+#op.exists(path)判断path对应文件或目录是否存在，返回True或False
+print(op.exists(r'C:\Users\jiatianle\Desktop\python\turtle库'))
+#op.isfile(path)判断path所对应是否为已存在的文件，返回True或False
+print(op.isfile(r'C:\Users\jiatianle\Desktop\python\turtle库\贾天乐.ico'))
+#op.isdir(path)判断path所对应是否为已存在的目录，返回True或False
+print(op.isdir(r'C:\Users\jiatianle\Desktop\python\turtle库\贾天乐.ico'))
+#op.getatime(path)返回path对应文件或目录上一次的访问时间
+print(op.getatime(r'C:\Users\jiatianle\Desktop\python\turtle库'))
+#op.getmtime(path)返回path对应文件或目录最近一次的修改时间
+print(op.getatime(r'C:\Users\jiatianle\Desktop\python\turtle库'))
+#op.getctime(path)返回path对应文件或目录的创建时间
+print(time.ctime(op.getctime(r'C:\Users\jiatianle\Desktop\python\turtle库')))
